@@ -64,7 +64,7 @@
 
         .sidebar-left {
 
-            width: 250px;
+            width: 200px;
 
             border-right: 1px solid #e2e8f0;
 
@@ -110,7 +110,7 @@
 
             flex: 1;
 
-            max-width: 650px;
+            max-width: none;
 
             background-color: #ffffff;
 
@@ -124,11 +124,11 @@
 
         .sidebar-right {
 
-            width: 300px;
+            display: none;
+
+            width: 200px;
 
             padding: 20px;
-
-            display: flex;
 
             flex-direction: column;
 
@@ -777,6 +777,33 @@
             cursor: pointer;
 
         }
+
+        /* Mobile responsive */
+        @media (max-width: 900px) {
+            .sidebar-left {
+                width: 150px;
+                padding: 15px;
+            }
+            
+            .nav-item {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .layout-wrapper {
+                flex-direction: column;
+            }
+            
+            .sidebar-left {
+                flex-direction: row;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                overflow-x: auto;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -844,7 +871,7 @@
             <!-- Biography Strings Panel -->
             <div class="bio-section">
                 <!-- Cleaned up cross-platform emojis to stop square boxes -->
-                <div class="bio-para"> 😉Latina, 24, 5’2 🙂 no PPV 😳 don’t be weird no customs, no ft 🥲
+                <div class="bio-para"> 😉Latina, 24, 5'2 🙂 no PPV 😳 don't be weird no customs, no ft 🥲
                   also not great at responding to messages, my apologies ❤️ lol
                   <br><br>
                   <a href="https://t.me/officail_Merritegg" target="_blank">Contact Me on Telegram</a>
