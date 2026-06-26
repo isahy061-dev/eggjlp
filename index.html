@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>foxybrown20 | OnlyFans Profile</title>
+    <title>egg | Profile</title>
 
     <style>
 
@@ -20,7 +20,7 @@
 
             box-sizing: border-box;
 
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
 
         }
 
@@ -28,15 +28,17 @@
 
         body {
 
-            background-color: #f4f6f8;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 
-            color: #242529;
+            color: #1a1a1a;
 
             display: flex;
 
             justify-content: center;
 
-            padding: 0;
+            padding: 20px 0;
+
+            min-height: 100vh;
 
         }
 
@@ -50,11 +52,15 @@
 
             width: 100%;
 
-            max-width: 1200px;
+            max-width: 900px;
 
             background-color: #ffffff;
 
             min-height: 100vh;
+
+            border-radius: 0;
+
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 
         }
 
@@ -66,16 +72,6 @@
 
             display: none;
 
-            width: 200px;
-
-            border-right: 1px solid #e2e8f0;
-
-            padding: 20px;
-
-            flex-direction: column;
-
-            gap: 25px;
-
         }
 
 
@@ -86,7 +82,7 @@
 
             font-weight: bold;
 
-            color: #242529;
+            color: #1a1a1a;
 
             cursor: pointer;
 
@@ -98,7 +94,7 @@
 
         .nav-item.muted {
 
-            color: #8a96a3;
+            color: #999;
 
         }
 
@@ -114,7 +110,7 @@
 
             background-color: #ffffff;
 
-            border-right: 1px solid #e2e8f0;
+            border-right: none;
 
         }
 
@@ -126,14 +122,6 @@
 
             display: none;
 
-            width: 200px;
-
-            padding: 20px;
-
-            flex-direction: column;
-
-            gap: 20px;
-
         }
 
 
@@ -144,23 +132,23 @@
 
             position: relative;
 
-            height: 240px;
+            height: 280px;
 
-            background-image: url('banner.jpeg');
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
             background-size: cover;
 
             background-position: center;
 
-            background-color: #e2e8f0;
+            overflow: hidden;
 
         }
 
 
 
-        /* Top Header Overlay info */
+        .banner-container::before {
 
-        .banner-overlay {
+            content: '';
 
             position: absolute;
 
@@ -170,19 +158,47 @@
 
             right: 0;
 
-            height: 65px;
+            bottom: 0;
 
-            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+            background: url('banner.jpeg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            opacity: 0.9;
+
+        }
+
+
+
+        /* Top Header Overlay info */
+
+        .banner-overlay {
+
+            position: relative;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 80px;
+
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
 
             display: flex;
 
             align-items: center;
 
-            padding: 0 15px;
+            padding: 0 20px;
 
             justify-content: space-between;
 
             color: #ffffff;
+
+            z-index: 2;
 
         }
 
@@ -204,9 +220,21 @@
 
         .back-arrow {
 
-            font-size: 20px;
+            font-size: 24px;
 
             font-weight: bold;
+
+            opacity: 0.9;
+
+            transition: opacity 0.2s;
+
+        }
+
+
+
+        .back-arrow:hover {
+
+            opacity: 1;
 
         }
 
@@ -218,6 +246,8 @@
 
             flex-direction: column;
 
+            gap: 4px;
+
         }
 
 
@@ -228,11 +258,11 @@
 
             align-items: center;
 
-            gap: 4px;
+            gap: 6px;
 
-            font-size: 16px;
+            font-size: 18px;
 
-            font-weight: bold;
+            font-weight: 600;
 
         }
 
@@ -240,9 +270,9 @@
 
         .verified-badge {
 
-            color: #00afe2;
+            color: #00d4ff;
 
-            font-size: 14px;
+            font-size: 16px;
 
         }
 
@@ -252,13 +282,15 @@
 
             display: flex;
 
-            gap: 12px;
+            gap: 16px;
 
             font-size: 12px;
 
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
 
             margin-top: 2px;
+
+            font-weight: 500;
 
         }
 
@@ -266,9 +298,21 @@
 
         .more-options {
 
-            font-size: 20px;
+            font-size: 22px;
 
             cursor: pointer;
+
+            opacity: 0.9;
+
+            transition: opacity 0.2s;
+
+        }
+
+
+
+        .more-options:hover {
+
+            opacity: 1;
 
         }
 
@@ -278,7 +322,7 @@
 
         .profile-header-row {
 
-            padding: 15px;
+            padding: 20px;
 
             position: relative;
 
@@ -288,9 +332,11 @@
 
             align-items: flex-start;
 
-            height: 45px;
+            margin-top: -80px;
 
             background-color: #ffffff;
+
+            z-index: 3;
 
         }
 
@@ -298,11 +344,11 @@
 
         .avatar-container {
 
-            position: absolute;
+            position: relative;
 
-            top: -75px;
+            top: 0;
 
-            left: 15px;
+            left: 0;
 
             z-index: 5;
 
@@ -312,13 +358,13 @@
 
         .avatar {
 
-            width: 120px;
+            width: 140px;
 
-            height: 120px;
+            height: 140px;
 
             border-radius: 50%;
 
-            border: 4px solid #ffffff;
+            border: 5px solid #ffffff;
 
             background-image: url('profile.jpg'), url('profile.jpeg'), url('profile.PNG');
 
@@ -326,7 +372,19 @@
 
             background-position: center;
 
-            background-color: #cbd5e1;
+            background-color: #e0e0e0;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+
+        .avatar:hover {
+
+            transform: scale(1.05);
 
         }
 
@@ -340,7 +398,7 @@
 
             margin-left: auto;
 
-            margin-top: -5px;
+            gap: 10px;
 
         }
 
@@ -348,17 +406,17 @@
 
         .share-box-btn {
 
-            width: 44px;
+            width: 48px;
 
-            height: 44px;
+            height: 48px;
 
             border-radius: 50%;
 
-            border: 1px solid #e2e8f0;
+            border: 2px solid #e0e0e0;
 
             background-color: #ffffff;
 
-            color: #8a96a3;
+            color: #667eea;
 
             display: flex;
 
@@ -368,7 +426,9 @@
 
             cursor: pointer;
 
-            transition: background-color 0.2s;
+            transition: all 0.3s ease;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
         }
 
@@ -376,7 +436,13 @@
 
         .share-box-btn:hover {
 
-            background-color: #f8fafc;
+            background-color: #f5f5f5;
+
+            border-color: #667eea;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 16px rgba(102,126,234,0.2);
 
         }
 
@@ -384,13 +450,13 @@
 
         .share-icon-svg {
 
-            width: 22px;
+            width: 24px;
 
-            height: 22px;
+            height: 24px;
 
             fill: none;
 
-            stroke: #00afe2;
+            stroke: currentColor;
 
             stroke-width: 2;
 
@@ -406,7 +472,7 @@
 
         .identity-section {
 
-            padding: 10px 15px 15px 15px;
+            padding: 10px 20px 20px 160px;
 
             background-color: #ffffff;
 
@@ -416,17 +482,17 @@
 
         .profile-name {
 
-            font-size: 20px;
+            font-size: 24px;
 
-            font-weight: bold;
+            font-weight: 700;
 
             display: flex;
 
             align-items: center;
 
-            gap: 4px;
+            gap: 6px;
 
-            color: #242529;
+            color: #1a1a1a;
 
         }
 
@@ -438,13 +504,15 @@
 
             align-items: center;
 
-            gap: 6px;
+            gap: 8px;
 
             font-size: 14px;
 
-            color: #8a96a3;
+            color: #666;
 
-            margin-top: 3px;
+            margin-top: 6px;
+
+            font-weight: 500;
 
         }
 
@@ -454,13 +522,13 @@
 
         .bio-section {
 
-            padding: 0 15px 15px 15px;
+            padding: 15px 20px 20px 20px;
 
-            line-height: 1.5;
+            line-height: 1.6;
 
             font-size: 15px;
 
-            color: #242529;
+            color: #444;
 
             background-color: #ffffff;
 
@@ -470,7 +538,31 @@
 
         .bio-para {
 
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+
+            line-height: 1.7;
+
+        }
+
+
+
+        .bio-para a {
+
+            color: #667eea;
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            transition: color 0.2s;
+
+        }
+
+
+
+        .bio-para a:hover {
+
+            color: #764ba2;
 
         }
 
@@ -478,13 +570,13 @@
 
         .copyright-notice {
 
-            font-size: 14px;
+            font-size: 13px;
 
-            color: #8a96a3;
+            color: #999;
 
-            margin-top: 15px;
+            margin-top: 12px;
 
-            line-height: 1.4;
+            line-height: 1.5;
 
         }
 
@@ -494,19 +586,29 @@
 
         .toggle-info-link {
 
-            color: #00afe2;
+            color: #667eea;
 
             font-size: 14px;
 
-            font-weight: bold;
+            font-weight: 600;
 
             cursor: pointer;
 
             display: inline-block;
 
-            margin-top: 10px;
+            margin-top: 12px;
 
             text-decoration: none;
+
+            transition: color 0.2s;
+
+        }
+
+
+
+        .toggle-info-link:hover {
+
+            color: #764ba2;
 
         }
 
@@ -516,13 +618,13 @@
 
         .subscription-feed-area {
 
-            padding: 15px;
+            padding: 25px 20px;
 
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid #f0f0f0;
 
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #f0f0f0;
 
-            background-color: #ffffff;
+            background-color: #fafafa;
 
         }
 
@@ -530,17 +632,17 @@
 
         .subscription-headline {
 
-            font-size: 14px;
+            font-size: 12px;
 
-            font-weight: bold;
+            font-weight: 700;
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
 
-            color: #8a96a3;
+            color: #999;
 
             text-transform: uppercase;
 
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
 
         }
 
@@ -566,19 +668,19 @@
 
             width: 100%;
 
-            background-color: #00afe2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
             color: #ffffff;
 
             border: none;
 
-            padding: 14px 24px;
+            padding: 16px 24px;
 
-            border-radius: 30px;
+            border-radius: 50px;
 
             font-size: 15px;
 
-            font-weight: bold;
+            font-weight: 700;
 
             display: flex;
 
@@ -588,9 +690,33 @@
 
             cursor: pointer;
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
 
             text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 6px 20px rgba(102,126,234,0.3);
+
+        }
+
+
+
+        .pill-subscribe-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+
+        }
+
+
+
+        .pill-subscribe-btn:active {
+
+            transform: translateY(-1px);
 
         }
 
@@ -600,19 +726,19 @@
 
             width: 100%;
 
-            background-color: #00afe2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
             color: #ffffff;
 
             border: none;
 
-            padding: 14px 24px;
+            padding: 16px 24px;
 
-            border-radius: 30px;
+            border-radius: 50px;
 
             font-size: 15px;
 
-            font-weight: bold;
+            font-weight: 700;
 
             display: flex;
 
@@ -624,15 +750,41 @@
 
             margin-bottom: 12px;
 
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 6px 20px rgba(102,126,234,0.3);
+
+        }
+
+
+
+        .pill-bundle-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+
+        }
+
+
+
+        .pill-bundle-btn:active {
+
+            transform: translateY(-1px);
+
         }
 
 
 
         .light-price-text {
 
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(255, 255, 255, 0.95);
 
-            font-weight: normal;
+            font-weight: 500;
 
         }
 
@@ -644,7 +796,7 @@
 
             display: flex;
 
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 2px solid #f0f0f0;
 
             background-color: #ffffff;
 
@@ -658,17 +810,29 @@
 
             text-align: center;
 
-            padding: 15px 0;
+            padding: 16px 0;
 
             font-size: 14px;
 
-            font-weight: bold;
+            font-weight: 600;
 
-            color: #8a96a3;
+            color: #999;
 
             text-transform: uppercase;
 
             cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+
+        .tab-item:hover {
+
+            color: #667eea;
 
         }
 
@@ -676,9 +840,11 @@
 
         .tab-item.active {
 
-            color: #242529;
+            color: #667eea;
 
-            border-bottom: 3px solid #242529;
+            border-bottom: 3px solid #667eea;
+
+            margin-bottom: -2px;
 
         }
 
@@ -688,7 +854,7 @@
 
         .locked-feed {
 
-            padding: 50px 20px;
+            padding: 60px 20px;
 
             text-align: center;
 
@@ -706,11 +872,11 @@
 
         .padlock-icon {
 
-            font-size: 45px;
+            font-size: 52px;
 
-            color: #cbd5e1;
+            color: #ddd;
 
-            margin-bottom: 20px;
+            margin-bottom: 25px;
 
         }
 
@@ -718,17 +884,17 @@
 
         .lock-box-border {
 
-            border: 1px solid #e2e8f0;
+            border: 2px solid #f0f0f0;
 
-            border-radius: 8px;
+            border-radius: 16px;
 
             width: 100%;
 
-            max-width: 500px;
+            max-width: 550px;
 
-            padding: 25px;
+            padding: 35px;
 
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #f9fafb 0%, #f5f7fa 100%);
 
             position: relative;
 
@@ -742,13 +908,15 @@
 
             justify-content: center;
 
-            gap: 15px;
+            gap: 20px;
 
-            color: #8a96a3;
+            color: #999;
 
-            font-size: 14px;
+            font-size: 13px;
 
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+
+            font-weight: 600;
 
         }
 
@@ -758,186 +926,362 @@
 
             width: 100%;
 
-            background-color: #00afe2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
             color: white;
 
             border: none;
 
-            padding: 12px;
+            padding: 16px 24px;
 
-            border-radius: 25px;
+            border-radius: 50px;
 
             font-size: 14px;
 
-            font-weight: bold;
+            font-weight: 700;
 
             text-transform: uppercase;
 
             cursor: pointer;
 
+            transition: all 0.3s ease;
+
+            letter-spacing: 0.5px;
+
+            box-shadow: 0 6px 20px rgba(102,126,234,0.3);
+
         }
+
+
+
+        .action-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+
+        }
+
+
+
+        .action-btn:active {
+
+            transform: translateY(-1px);
+
+        }
+
+
 
         /* Mobile responsive */
+
         @media (max-width: 900px) {
-            .sidebar-left {
-                width: 150px;
-                padding: 15px;
+
+            .layout-wrapper {
+
+                max-width: 100%;
+
+                border-radius: 0;
+
             }
+
             
-            .nav-item {
-                font-size: 14px;
+
+            .profile-container {
+
+                flex: 1;
+
             }
+
         }
 
+
+
         @media (max-width: 600px) {
-            .layout-wrapper {
-                flex-direction: column;
+
+            .banner-container {
+
+                height: 220px;
+
             }
+
             
-            .sidebar-left {
-                flex-direction: row;
-                width: 100%;
-                border-right: none;
-                border-bottom: 1px solid #e2e8f0;
-                overflow-x: auto;
-                gap: 15px;
+
+            .profile-header-row {
+
+                margin-top: -60px;
+
+                padding: 15px;
+
             }
+
+            
+
+            .avatar {
+
+                width: 100px;
+
+                height: 100px;
+
+                border: 4px solid #ffffff;
+
+            }
+
+            
+
+            .identity-section {
+
+                padding: 10px 15px 15px 115px;
+
+            }
+
+            
+
+            .profile-name {
+
+                font-size: 20px;
+
+            }
+
+            
+
+            .action-buttons {
+
+                gap: 8px;
+
+            }
+
+            
+
+            .share-box-btn {
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
         }
+
     </style>
+
 </head>
+
 <body>
 
     <div class="layout-wrapper">
-        <!-- Left Side Navigation Menu Panel -->
-        <div class="sidebar-left">
-            <div class="nav-item">Home</div>
-            <div class="nav-item muted">Notifications</div>
-            <div class="nav-item muted">Messages</div>
-            <div class="nav-item muted">Bookmarks</div>
-            <div class="nav-item muted">Lists</div>
-            <div class="nav-item">More</div>
-        </div>
 
         <!-- Central Stream Block Container -->
+
         <div class="profile-container">
+
             <!-- Header Banner Wrapper Graphic -->
+
             <div class="banner-container">
+
                 <div class="banner-overlay">
+
                     <div class="back-nav">
+
                         <span class="back-arrow">&larr;</span>
+
                         <div class="header-meta">
+
                             <div class="header-title-row">
+
                                 <span>egg</span>
-                                <span class="verified-badge">&#10003;</span>
+
+                                <span class="verified-badge">✓</span>
+
                             </div>
+
                             <div class="banner-metrics">
+
                                 <span>🖼️ 750</span>
+
                                 <span>🎥 735</span>
+
                                 <span>🌐 14</span>
+
                                 <span>❤️ 102.4K</span>
+
                             </div>
+
                         </div>
+
                     </div>
-                    <div class="more-options">&vellip;</div>
+
+                    <div class="more-options">⋮</div>
+
                 </div>
+
             </div>
 
             <!-- Profile Picture Container & Share Box Icon Positioning -->
+
             <div class="profile-header-row">
+
                 <div class="avatar-container">
+
                     <div class="avatar"></div>
+
                 </div>
+
                 <div class="action-buttons">
+
                     <button class="share-box-btn" title="Share">
+
                         <svg class="share-icon-svg" viewBox="0 0 24 24">
-                            <rect x="3" y="11" width="14" height="10" rx="2" ry="2" transform="rotate(-10 10 16)"></rect>
-                            <path d="M14 3l5 5-5 5M19 8H9a4 4 0 0 0-4 4v3"></path>
+
+                            <path d="M4 12a8 8 0 0 1 15.55-1m0 0a8 8 0 0 1-15.55 1m15.55 1v3m0 0a8 8 0 0 1-15.55-1" stroke-linecap="round" stroke-linejoin="round"></path>
+
                         </svg>
+
                     </button>
+
                 </div>
+
             </div>
 
             <!-- Identity Display Rows -->
+
             <div class="identity-section">
-                <div class="profile-name">egg <span class="verified-badge">&#10003;</span></div>
+
+                <div class="profile-name">egg <span class="verified-badge">✓</span></div>
+
                 <div class="profile-username-row">
+
                     <span>@eggjlp</span>
-                    <span>&bull;</span>
+
+                    <span>•</span>
+
                     <span>Seen May 28</span>
+
                 </div>
+
             </div>
 
             <!-- Biography Strings Panel -->
+
             <div class="bio-section">
-                <!-- Cleaned up cross-platform emojis to stop square boxes -->
-                <div class="bio-para"> 😉Latina, 24, 5'2 🙂 no PPV 😳 don't be weird no customs, no ft 🥲
-                  also not great at responding to messages, my apologies ❤️ lol
-                  <br><br>
+
+                <div class="bio-para">😉 Latina, 24, 5'2 🙂 no PPV 😳 don't be weird no customs, no ft 🥲<br>also not great at responding to messages, my apologies ❤️ lol<br><br>
+
                   <a href="https://t.me/officail_Merritegg" target="_blank">Contact Me on Telegram</a>
+
                 </div>
+
                 <a href="#" class="toggle-info-link">More info</a>
+
             </div>
 
             <!-- Inline Feed Main Content Subscription Block Section -->
+
             <div class="subscription-feed-area">
+
                 <div class="subscription-headline">Subscription</div>
+
                 
+
                 <a href="https://t.me/officail_Merritegg" class="whatsapp-link-wrapper" target="_blank">
+
                     <button class="pill-subscribe-btn">
+
                         <span>BOOK A MEET</span>
+
                         <span class="light-price-text">$70</span>
+
                     </button>
+
                 </a>
 
-                <div class="subscription-headline">Subscription Bundles</div>
+                <div class="subscription-headline">Bundle Deals</div>
+
                 
+
                 <a href="https://t.me/officail_Merritegg" class="whatsapp-link-wrapper" target="_blank">
+
                     <button class="pill-bundle-btn">
+
                         <span>3 MONTHS (5% off)</span>
+
                         <span class="light-price-text">$42.75</span>
+
                     </button>
+
                 </a>
 
                 <a href="https://t.me/officail_Merritegg" class="whatsapp-link-wrapper" target="_blank">
+
                     <button class="pill-bundle-btn">
+
                         <span>6 MONTHS (10% off)</span>
+
                         <span class="light-price-text">$81</span>
+
                     </button>
+
                 </a>
 
                 <a href="https://t.me/officail_Merritegg" class="whatsapp-link-wrapper" target="_blank">
+
                     <button class="pill-bundle-btn">
+
                         <span>12 MONTHS (30% off)</span>
+
                         <span class="light-price-text">$126</span>
+
                     </button>
+
                 </a>
+
             </div>
 
             <!-- Posts Counter Feed Navigation Tabs -->
+
             <div class="feed-tabs">
+
                 <div class="tab-item active">896 Posts</div>
+
                 <div class="tab-item">1489 Media</div>
+
             </div>
 
             <!-- Locked Assets Placeholder Post Box Frame -->
+
             <div class="locked-feed">
+
                 <div class="padlock-icon">🔒</div>
+
                 <div class="lock-box-border">
+
                     <div class="inline-metrics">
+
                         <span>📄 895</span>
+
                         <span>🖼️ 750</span>
+
                         <span>🎥 735</span>
+
                         <span>🎙️ 0</span>
+
                         <span>❤️ 3</span>
+
                     </div>
-                    <!-- Rounded pill style subscribe button linked seamlessly -->
+
                     <a href="https://t.me/officail_Merritegg" class="whatsapp-link-wrapper" target="_blank">
-                        <button class="action-btn">Subscribe to see user's posts</button>
+
+                        <button class="action-btn">Subscribe to see posts</button>
+
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
+
 </body>
+
 </html>
